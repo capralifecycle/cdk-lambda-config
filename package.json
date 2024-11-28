@@ -10,7 +10,7 @@
   "scripts": {
     "build": "rimraf dist && NODE_OPTIONS=--import=tsx webpack && tsc",
     "watch": "tsc -w",
-    "test": "jest",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepare": "npm run build && husky",
