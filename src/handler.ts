@@ -49,7 +49,6 @@ export const handler: OnEventHandler = async (event) => {
           FunctionName: functionArn,
         }),
       )
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       const { data } = await axios.get<Buffer>(Code?.Location ?? "", {
         responseType: "arraybuffer",
       })
