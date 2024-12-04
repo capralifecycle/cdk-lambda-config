@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 import * as path from "path"
 import { fileURLToPath } from "url"
 
