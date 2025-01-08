@@ -195,7 +195,7 @@ exports[`LambdaConfig 1`] = `
           ],
         },
         "Runtime": "nodejs18.x",
-        "Timeout": 10,
+        "Timeout": 120,
       },
       "Type": "AWS::Lambda::Function",
     },
@@ -237,6 +237,7 @@ exports[`LambdaConfig 1`] = `
             {
               "Action": [
                 "lambda:GetFunction",
+                "lambda:GetFunctionConfiguration",
                 "lambda:UpdateFunctionCode",
               ],
               "Effect": "Allow",

@@ -94,10 +94,14 @@ class LambdaConfigProvider extends Construct {
         code: lambda.Code.fromAsset(path.join(__dirname, "../dist/handler")),
         handler: "index.handler",
         runtime: lambda.Runtime.NODEJS_18_X,
-        timeout: Duration.seconds(10),
+        timeout: Duration.minutes(2),
         initialPolicy: [
           new iam.PolicyStatement({
-            actions: ["lambda:GetFunction", "lambda:UpdateFunctionCode"],
+            actions: [
+              "lambda:GetFunction",
+              "lambda:GetFunctionConfiguration",
+              "lambda:UpdateFunctionCode",
+            ],
             resources: ["*"],
           }),
         ],

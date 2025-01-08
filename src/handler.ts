@@ -6,6 +6,7 @@ import {
   LambdaClient,
   GetFunctionCommand,
   UpdateFunctionCodeCommand,
+  GetFunctionConfigurationCommand,
 } from "@aws-sdk/client-lambda"
 import axios from "axios"
 import { mkdtempSync, writeFileSync } from "fs"
@@ -60,6 +61,30 @@ export const handler: OnEventHandler = async (event) => {
           Publish: true,
         }),
       )
+
+      let attempts = 0
+      while (++attempts <= 30) {
+        const { State } = await lambdaClient.send(
+          new GetFunctionConfigurationCommand({
+            FunctionName: FunctionArn,
+          }),
+        )
+
+        if (!State || State === "Pending") {
+          console.log(
+            `Waiting for updated Lambda function to become Active, is: ${State} (attempts: ${attempts})`,
+          )
+          await new Promise((resolve) =>
+            setTimeout(resolve, Math.min(5000, 1000 * attempts)),
+          )
+          continue
+        }
+        if (State === "Active") {
+          console.log("Function is now Active!")
+          break
+        }
+        throw new Error(`Lambda function state is: ${State}`)
+      }
 
       console.log("Updated function", { CodeSha256, Version, FunctionArn })
 
