@@ -8,7 +8,7 @@
     "url": "https://github.com/capralifecycle/cdk-lambda-config"
   },
   "scripts": {
-    "build": "rimraf dist && NODE_OPTIONS=--import=tsx webpack && tsc",
+    "build": "rm -rf dist && NODE_OPTIONS=--import=tsx webpack && tsc",
     "watch": "tsc -w",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "eslint .",
@@ -55,7 +55,6 @@
     "jest": "29.7.0",
     "jest-cdk-snapshot": "2.2.5",
     "prettier": "3.4.2",
-    "rimraf": "6.0.1",
     "semantic-release": "24.2.1",
     "ts-jest": "29.2.5",
     "ts-loader": "9.5.1",
