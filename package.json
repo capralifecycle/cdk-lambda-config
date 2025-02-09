@@ -45,7 +45,7 @@
     "@typescript-eslint/eslint-plugin": "8.23.0",
     "@typescript-eslint/parser": "8.23.0",
     "adm-zip": "0.5.16",
-    "aws-cdk-lib": "2.177.0",
+    "aws-cdk-lib": "2.178.0",
     "axios": "1.7.9",
     "constructs": "10.4.2",
     "eslint": "9.19.0",
