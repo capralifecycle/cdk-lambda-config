@@ -7,3 +7,6 @@ build:
 	npm run lint
 	npm run build
 	npm run test
+
+snapshot:
+	npm test -- --updateSnapshot
