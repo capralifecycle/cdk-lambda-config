@@ -41,7 +41,7 @@
     "@types/adm-zip": "0.5.7",
     "@types/aws-lambda": "8.10.149",
     "@types/jest": "29.5.14",
-    "@types/node": "22.15.3",
+    "@types/node": "22.15.12",
     "@typescript-eslint/eslint-plugin": "8.31.1",
     "@typescript-eslint/parser": "8.31.1",
     "adm-zip": "0.5.16",
