@@ -34,8 +34,8 @@
   "devDependencies": {
     "@aws-cdk/assert": "2.68.0",
     "@aws-sdk/client-lambda": "3.804.0",
-    "@commitlint/cli": "19.8.0",
-    "@commitlint/config-conventional": "19.8.0",
+    "@commitlint/cli": "19.8.1",
+    "@commitlint/config-conventional": "19.8.1",
     "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.26.0",
     "@types/adm-zip": "0.5.7",
