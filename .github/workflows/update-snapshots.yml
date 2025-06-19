@@ -35,7 +35,7 @@ jobs:
               const prNumber = context.payload.issue.number;
               const runId = process.env.GITHUB_RUN_ID;
               const runUrl = `https://github.com/${owner}/${repo}/actions/runs/${runId}`;
-              const body = `Updating snapshots... [View workflow run here](${runUrl})`;
+              const body = `Updating snapshots... [View workflow run](${runUrl})`;
 
               await github.rest.issues.createComment({
                 issue_number: prNumber,
