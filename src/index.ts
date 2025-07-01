@@ -1,14 +1,14 @@
+import * as path from "node:path"
+import { fileURLToPath } from "node:url"
 import {
-  aws_iam as iam,
-  aws_lambda as lambda,
   CustomResource,
   custom_resources as cr,
   Duration,
+  aws_iam as iam,
+  aws_lambda as lambda,
   Stack,
 } from "aws-cdk-lib"
 import { Construct } from "constructs"
-import * as path from "path"
-import { fileURLToPath } from "url"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
