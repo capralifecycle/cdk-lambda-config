@@ -1,6 +1,8 @@
 // Cheating a bit as it seems the type is not available in the export.
 // Define the OnEventHandler type since we can't import it
 
+import { mkdtempSync, writeFileSync } from "node:fs"
+import { resolve } from "node:path"
 import {
   GetFunctionCommand,
   GetFunctionConfigurationCommand,
@@ -9,8 +11,6 @@ import {
 } from "@aws-sdk/client-lambda"
 import Zip from "adm-zip"
 import axios from "axios"
-import { mkdtempSync, writeFileSync } from "fs"
-import { resolve } from "path"
 
 type OnEventHandler = (event: {
   RequestType: "Create" | "Update" | "Delete"
