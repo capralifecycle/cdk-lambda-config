@@ -3,7 +3,7 @@
   "extends": [
     "github>capralifecycle/renovate-config:library"
   ],
-  "automerge": true,
+  "automerge": false,
   "automergeType": "branch",
   "packageRules": [
     {
