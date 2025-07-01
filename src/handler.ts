@@ -1,13 +1,13 @@
 // Cheating a bit as it seems the type is not available in the export.
 // Define the OnEventHandler type since we can't import it
-import Zip from "adm-zip"
 
 import {
-  LambdaClient,
   GetFunctionCommand,
-  UpdateFunctionCodeCommand,
   GetFunctionConfigurationCommand,
+  LambdaClient,
+  UpdateFunctionCodeCommand,
 } from "@aws-sdk/client-lambda"
+import Zip from "adm-zip"
 import axios from "axios"
 import { mkdtempSync, writeFileSync } from "fs"
 import { resolve } from "path"
@@ -32,7 +32,7 @@ export const handler: OnEventHandler = async (event) => {
       }
 
     case "Create":
-    case "Update":
+    case "Update": {
       console.log(JSON.stringify(event))
 
       const functionArnFull = event.ResourceProperties.FunctionArn as string
@@ -92,6 +92,7 @@ export const handler: OnEventHandler = async (event) => {
         PhysicalResourceId: functionArn,
         Data: { CodeSha256, Version, FunctionArn },
       }
+    }
   }
 }
 
