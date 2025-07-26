@@ -43,7 +43,7 @@
     "@types/node": "24.1.0",
     "adm-zip": "0.5.16",
     "aws-cdk-lib": "2.202.0",
-    "axios": "1.10.0",
+    "axios": "1.11.0",
     "constructs": "10.4.2",
     "husky": "9.1.7",
     "jest": "30.0.5",
