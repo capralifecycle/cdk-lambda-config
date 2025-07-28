@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`LambdaConfig 1`] = `
 {
@@ -96,6 +96,10 @@ exports[`LambdaConfig 1`] = `
           },
         },
         "Handler": "framework.onEvent",
+        "LoggingConfig": {
+          "ApplicationLogLevel": "FATAL",
+          "LogFormat": "JSON",
+        },
         "Role": {
           "Fn::GetAtt": [
             "lifliginfralambdaconfigproviderProviderframeworkonEventServiceRoleD0656D3D",
