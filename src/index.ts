@@ -93,7 +93,7 @@ class LambdaConfigProvider extends Construct {
       onEventHandler: new lambda.Function(this, "UpdateCodeFn", {
         code: lambda.Code.fromAsset(path.join(__dirname, "../dist/handler")),
         handler: "index.handler",
-        runtime: lambda.Runtime.NODEJS_18_X,
+        runtime: lambda.Runtime.NODEJS_22_X,
         timeout: Duration.minutes(2),
         initialPolicy: [
           new iam.PolicyStatement({
