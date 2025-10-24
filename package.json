@@ -41,7 +41,7 @@
     "@types/adm-zip": "0.5.7",
     "@types/aws-lambda": "8.10.156",
     "@types/jest": "30.0.0",
-    "@types/node": "24.8.1",
+    "@types/node": "24.9.1",
     "adm-zip": "0.5.16",
     "aws-cdk-lib": "2.220.0",
     "axios": "1.12.2",
