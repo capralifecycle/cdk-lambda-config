@@ -35,7 +35,7 @@
   "devDependencies": {
     "@aws-cdk/assert": "2.68.0",
     "@aws-sdk/client-lambda": "3.962.0",
-    "@biomejs/biome": "2.3.10",
+    "@biomejs/biome": "2.3.11",
     "@commitlint/cli": "20.3.0",
     "@commitlint/config-conventional": "20.3.0",
     "@types/adm-zip": "0.5.7",
