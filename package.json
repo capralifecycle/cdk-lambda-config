@@ -39,7 +39,7 @@
     "@commitlint/cli": "20.4.2",
     "@commitlint/config-conventional": "20.4.2",
     "@types/adm-zip": "0.5.7",
-    "@types/aws-lambda": "8.10.160",
+    "@types/aws-lambda": "8.10.161",
     "@types/jest": "30.0.0",
     "@types/node": "24.10.14",
     "adm-zip": "0.5.16",
