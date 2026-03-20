@@ -38,7 +38,7 @@
     "@biomejs/biome": "2.4.7",
     "@commitlint/cli": "20.5.0",
     "@commitlint/config-conventional": "20.5.0",
-    "@types/adm-zip": "0.5.7",
+    "@types/adm-zip": "0.5.8",
     "@types/aws-lambda": "8.10.161",
     "@types/jest": "30.0.0",
     "@types/node": "24.12.0",
